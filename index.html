@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#21152f" />
+  <title>A Little Universe For You ✿</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div id="cursor-sparkles" aria-hidden="true"></div>
+  <canvas id="petal-canvas" aria-hidden="true"></canvas>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+
+  <button class="sound-toggle" id="soundToggle" aria-label="Toggle ambient sound" title="Ambient sound">
+    <span id="soundIcon">♫</span><span id="soundText">sound off</span>
+  </button>
+  <div class="progress"><span id="progressBar"></span></div>
+
+  <div class="top-floating-star star-top-one">✧</div><div class="top-floating-star star-top-two">✦</div>
+  <main>
+    <section class="screen hero active" id="welcome">
+      <div class="tiny-orbit orbit-a">✦</div><div class="tiny-orbit orbit-b">✿</div>
+      <div class="eyebrow"><span class="eyebrow-line"></span> A VERY IMPORTANT INTERNET EVENT <span class="eyebrow-line"></span></div>
+      <div class="hero-flower" aria-hidden="true">
+        <span class="flower-petal p1"></span><span class="flower-petal p2"></span>
+        <span class="flower-petal p3"></span><span class="flower-petal p4"></span>
+        <span class="flower-petal p5"></span><span class="flower-petal p6"></span>
+        <span class="flower-center">♡</span>
+      </div>
+      <p class="small-note">handmade with questionable levels of affection</p>
+      <h1>Hey, <span class="script-name" id="friendName">Dumboooooooo</span><span class="title-period">.</span></h1>
+      <p class="hero-copy">I made you a tiny corner of the universe.<br>It's mostly flowers, nonsense, and <em>you</em>.</p>
+      <button class="primary-btn" data-next="chaos">Enter your little universe <span>↗</span></button>
+      <div class="scroll-hint"><span class="scroll-dot"></span> PROCEED WITH CURIOSITY</div>
+    </section>
+
+    <section class="screen chaos" id="chaos">
+      <div class="section-tag">CHAPTER 01 <span>·</span> THE VERY SERIOUS STUFF</div>
+      <h2>Before we continue,<br><em>we need to talk.</em></h2>
+      <p class="section-intro">Please answer this extremely important question with honesty and grace.</p>
+      <div class="question-card">
+        <div class="question-sticker">⚠️ TOP SECRET ⚠️</div>
+        <p class="question">Why are you like this?</p>
+        <div class="answer-zone" id="answerZone">
+          <button class="answer-btn" id="obviouslyBtn">Obviously, I'm iconic</button>
+          <button class="answer-btn secondary" id="noIdeaBtn">I have no idea 😇</button>
+        </div>
+        <p class="answer-reaction" id="answerReaction" aria-live="polite"></p>
+      </div>
+      <div class="floating-note note-left">certified menace</div>
+      <div class="floating-note note-right">still kinda cute tho</div>
+      <button class="text-btn next-link" data-next="enchanted">Okay, enough bullying. Probably. <span>→</span></button>
+    </section>
+
+
+    <section class="screen enchanted" id="enchanted">
+      <div class="section-tag">BONUS LEVEL <span>·</span> THE ENCHANTED DETOUR</div>
+      <h2>Welcome to your<br><em>tiny fairy kingdom.</em></h2>
+      <p class="section-intro">A very serious magical place. Please do not feed the fairies after midnight. They become dramatic.</p>
+      <div class="magic-world" id="magicWorld">
+        <div class="moon-glow"></div>
+        <div class="shooting-star star-a"></div><div class="shooting-star star-b"></div>
+        <div class="fairy fairy-one" role="img" aria-label="A tiny flying fairy"><span class="fairy-wings">༄</span><span class="fairy-body">🧚🏻‍♀️</span><span class="fairy-dust"></span></div>
+        <div class="fairy fairy-two" role="img" aria-label="A little fairy friend"><span class="fairy-wings">༄</span><span class="fairy-body">🧚🏽‍♀️</span></div>
+        <div class="butterfly butterfly-one">🦋</div><div class="butterfly butterfly-two">🦋</div>
+        <div class="firefly firefly-one"></div><div class="firefly firefly-two"></div><div class="firefly firefly-three"></div>
+        <div class="fairy-house">🍄</div>
+        <div class="magic-path"></div>
+        <button class="magic-carriage" id="carriageBtn" aria-label="Tap the magical carriage">
+          <span class="carriage-sparkle">✦</span><span class="carriage-emoji">🎠</span><span class="carriage-label">tap for a ride</span>
+        </button>
+        <div class="world-flower flower-world-a">✿</div><div class="world-flower flower-world-b">❀</div><div class="world-flower flower-world-c">✾</div>
+      </div>
+      <div class="magic-message" id="magicMessage" aria-live="polite">Tap the little carriage. It has absolutely no driver's license.</div>
+      <div class="magic-controls">
+        <button class="magic-chip" id="summonFairies">Summon more fairies ✨</button>
+        <button class="magic-chip" id="makeWish">Make a tiny wish ♡</button>
+      </div>
+      <button class="text-btn next-link" data-next="memories">Okay, back to the evidence folder <span>→</span></button>
+    </section>
+
+    <section class="screen memories" id="memories">
+      <div class="section-tag">CHAPTER 02 <span>·</span> PROOF OF YOUR EXISTENCE</div>
+      <h2>A tiny gallery of<br><em>your shenanigans.</em></h2>
+      <p class="section-intro">Four little windows into the very important phenomenon known as you.</p>
+      <div class="gallery" id="gallery">
+        <figure class="photo-card photo-one">
+          <div class="photo-wrap"><img src="images/her-photo-1.jpg" alt="A favorite photo" onerror="this.closest('.photo-wrap').classList.add('placeholder'); this.style.display='none'"><div class="photo-placeholder"><span>✿</span><strong>your pretty face goes here</strong><small>images/her-photo-1.jpg</small></div></div>
+          <figcaption><span class="photo-number">01</span> main character energy</figcaption>
+        </figure>
+        <figure class="photo-card photo-two">
+          <div class="photo-wrap"><img src="images/her-photo-2.jpg" alt="A favorite memory" onerror="this.closest('.photo-wrap').classList.add('placeholder'); this.style.display='none'"><div class="photo-placeholder"><span>♡</span><strong>evidence of being adorable</strong><small>images/her-photo-2.jpg</small></div></div>
+          <figcaption><span class="photo-number">02</span> suspiciously photogenic</figcaption>
+        </figure>
+        <figure class="photo-card photo-three">
+          <div class="photo-wrap"><img src="images/her-photo-3.jpg" alt="A funny photo" onerror="this.closest('.photo-wrap').classList.add('placeholder'); this.style.display='none'"><div class="photo-placeholder"><span>☼</span><strong>professional troublemaker</strong><small>images/her-photo-3.jpg</small></div></div>
+          <figcaption><span class="photo-number">03</span> chaos, but make it cute</figcaption>
+        </figure>
+        <figure class="photo-card photo-four">
+          <div class="photo-wrap"><img src="images/her-photo-4.jpg" alt="Another favorite photo" onerror="this.closest('.photo-wrap').classList.add('placeholder'); this.style.display='none'"><div class="photo-placeholder"><span>✧</span><strong>one more for the archives</strong><small>images/her-photo-4.jpg</small></div></div>
+          <figcaption><span class="photo-number">04</span> a certified little star</figcaption>
+        </figure>
+      </div>
+      <p class="gallery-tip">Psst… replace the sample filenames with your pictures in the <code>images</code> folder.</p>
+      <button class="primary-btn" data-next="garden">I admit, the gallery is cute <span>♡</span></button>
+    </section>
+
+    <section class="screen garden" id="garden">
+      <div class="section-tag">CHAPTER 03 <span>·</span> A LITTLE MAGIC</div>
+      <h2>Pick a flower.<br><em>Any flower.</em></h2>
+      <p class="section-intro">The garden has absolutely no quality control. Just like our conversations.</p>
+      <div class="flower-garden">
+        <button class="garden-flower flower-pink" data-message="You are a little dramatic. The garden has reviewed the evidence and finds you guilty. 🌷" aria-label="Pink flower"><span>✿</span></button>
+        <button class="garden-flower flower-yellow" data-message="Official reminder: you deserve nice things, good days, and snacks you don't have to share. 🌼" aria-label="Yellow flower"><span>✿</span></button>
+        <button class="garden-flower flower-lilac" data-message="If being a menace was an Olympic sport, you would have a gold medal and an annoying victory speech. 🏆" aria-label="Lilac flower"><span>✿</span></button>
+        <button class="garden-flower flower-blue" data-message="Somehow, you make even a regular day feel like a story worth keeping. Don't let that go to your head. 💙" aria-label="Blue flower"><span>✿</span></button>
+        <button class="garden-flower flower-peach" data-message="Your daily dose of affection has arrived. Please allow 3–5 business days for your ego to recover. 💌" aria-label="Peach flower"><span>✿</span></button>
+      </div>
+      <div class="flower-message" id="flowerMessage" aria-live="polite">Tap a flower to reveal its extremely scientific wisdom.</div>
+      <button class="text-btn next-link" data-next="letter">Okay, one last thing… <span>→</span></button>
+    </section>
+
+    <section class="screen letter-screen" id="letter">
+      <div class="section-tag">FINAL CHAPTER <span>·</span> NO JOKES (FOR 8 SECONDS)</div>
+      <div class="letter-wrap">
+        <div class="letter-sparkle sparkle-one">✧</div><div class="letter-sparkle sparkle-two">✦</div>
+        <div class="letter-top">A little note, just for you</div>
+        <div class="letter-flower">❀</div>
+        <h2>In a world this big,<br><em>I'm glad I found you.</em></h2>
+        <div class="letter-copy">
+          <p>It's kind of wild how someone can live far away and still become part of your everyday life. A message, a laugh, a random little update — and suddenly, your day has a familiar person in it.</p>
+          <p>So here's your reminder: you're appreciated more than my teasing lets on. I hope life gives you soft mornings, people who understand you, reasons to laugh until your stomach hurts, and flowers on days you least expect them.</p>
+          <p>Thank you for being you — even when you're annoying. Especially then, actually. Don't get too emotional though. I have a reputation to maintain.</p>
+        </div>
+        <div class="signature">your favorite nuisance <span>♡</span></div>
+      </div>
+      <button class="primary-btn final-btn" id="finalSurprise">One last surprise? <span>✨</span></button>
+      <div class="final-reveal" id="finalReveal" aria-live="polite">
+        <div class="reveal-heart">♡</div>
+        <h3>You matter. A lot.</h3>
+        <p>Now go drink some water, fix your crown, and remember that somewhere on the internet, someone is rooting for you.</p>
+        <span class="tiny-postscript">P.S. you're still annoying. respectfully.</span>
+        <button class="text-btn" id="replayBtn">Experience the chaos again ↺</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
